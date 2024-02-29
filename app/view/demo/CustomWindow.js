@@ -9,7 +9,7 @@ Ext.define("MsTraining.view.demo.CustomWindow", {
     autoShow: true,
     closabele: true,
     maximizable: true,
-    draggable: true,
+    // draggable: true,
     modal: true
 }
 // , function() {

@@ -1,5 +1,11 @@
 Ext.define("MsTraining.model.Person", {
-    name: "Bella",
+    name: "Unknown",
+    requires: ['MsTraining.util.Util'],
+    init: function() {
+        throw new Error('[' +  + ']')
+    },
+
+
     constructor: function(name) {
         if(name) {
             this.name == name
@@ -7,10 +13,11 @@ Ext.define("MsTraining.model.Person", {
     },
 
     eat: function (foodType) {
-        alert(this.name + " is eating: " + foodType)
+        MsTraining.util.Util.logInfo(this.name + " is eating: " + foodType)
+        // alert(this.name + " is eating: " + foodType)
     }
 },
 ()=> {
-    var bob = Ext.create("MsTraining.model.Person");
+    var bob = Ext.create("MsTraining.model.Person", "Bella");
     bob.eat("Salad")
 })

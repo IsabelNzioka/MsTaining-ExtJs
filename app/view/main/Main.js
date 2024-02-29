@@ -81,13 +81,37 @@ Ext.define('MsTraining.view.main.Main', {
         items: [{
             xtype: 'mainlist'
         }]
-    }, {
-        title: 'Users',
+    }, 
+    {
+        title: 'Todos',
+        iconCls: 'fa-solid fa-list',
+        items: [
+            {
+                xtype: 'todogrid'
+            }
+        ]
+    }, 
+    
+    {
+        title: 'Posts',
         iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
+       items: [
+        {
+            xtype: 'postgrid'
         }
-    }, {
+       ]
+    },
+    {
+        title: 'Albums',
+        iconCls: 'fa-light fa-images',
+       items: [
+        {
+            xtype: 'albumgrid'
+        }
+       ]
+    },
+    
+    {
         title: 'Groups',
         iconCls: 'fa-users',
         bind: {
