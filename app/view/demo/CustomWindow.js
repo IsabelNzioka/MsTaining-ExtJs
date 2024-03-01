@@ -7,7 +7,7 @@ Ext.define("MsTraining.view.demo.CustomWindow", {
     height: 200,
     width: 220,
     autoShow: true,
-    closabele: true,
+    closable: true,
     maximizable: true,
     // draggable: true,
     modal: true

@@ -11,6 +11,12 @@ Ext.define('MsTraining.view.albums.AlbumGrid', {
     ],
 
     selModel: {
-        selType: 'checkboxmodel'
-    }
+        mode: 'SINGLE'
+    },
+    bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true
+    },
+    scrollable:true,
+    height: 800
 })

@@ -5,3 +5,8 @@ Ext.define("MsTraining.util.Math", {
         }
     }
 })
+
+
+// Ext.define("MsTraining.", {
+//    extend:'Ext.'
+// })

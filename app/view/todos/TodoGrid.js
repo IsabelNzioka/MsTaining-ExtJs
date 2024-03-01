@@ -12,6 +12,12 @@ Ext.define('MsTraining.view.todos.TodoGrid', {
     ],
 
     selModel: {
-        selType: 'checkboxmodel'
-    }
+        mode: 'SINGLE'
+    },
+    bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true
+    },
+    scrollable:true,
+    height: 800
 })

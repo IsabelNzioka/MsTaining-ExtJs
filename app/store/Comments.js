@@ -9,4 +9,4 @@ Ext.define("MsTraining.store.Comments",
     autoLoad: true,
     
        
-})
+}) 
