@@ -5,3 +5,5 @@ Ext.define('MsTraining.model.Personnel', {
         'name', 'email', 'phone'
     ]
 });
+
+

@@ -83,6 +83,15 @@ Ext.define('MsTraining.view.main.Main', {
         }]
     }, 
     {
+        title: 'Users',
+        iconCls: 'fa-user',
+        items: [
+            {
+                xtype: 'usergrid'
+            }
+        ]
+    }, 
+    {
         title: 'Todos',
         iconCls: 'fa-solid fa-list',
         items: [
