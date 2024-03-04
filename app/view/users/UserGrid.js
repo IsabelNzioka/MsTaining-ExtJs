@@ -1,22 +1,26 @@
 Ext.define('MsTraining.view.users.UserGrid', {
     extend: 'Ext.grid.Panel',
-    xtype: 'usergrid',
+    xtype: 'usergrid1',
     store: {
         type: 'users'
     },
 
     title: 'Users',
     columns: [
-        {dataIndex: 'id', text: 'ID' },
+        {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'name', text: 'Name' , flex: 1 },
         {dataIndex: 'email', text: 'Email' , flex: 1},
-        {dataIndex: 'street', text: 'Street' },
+        {dataIndex: 'street', text: 'Street', flex: 1 },
         {dataIndex: 'suite', text: 'Suite' },
         {dataIndex: 'city', text: 'City' },
         {dataIndex: 'zipcode', text: 'ZipCode' },
         {dataIndex: 'lat', text: 'Lat' },
-        {dataIndex: 'lng', text: 'Lng' },
-     
+        {dataIndex: 'lng', text: 'Lng', flex: 1 },
+        // {dataIndex: 'phone', text: 'Phone' },
+        // {dataIndex: 'website', text: 'Website' },
+        // {dataIndex: 'name', text: 'Company Name', flex: 1  },
+        // {dataIndex: 'catchPhrase', text: 'CatchPhrase', flex: 1  },
+        // {dataIndex: 'bs', text: 'Bs', flex: 1  },
     ],
 
     selModel: {
@@ -24,8 +28,11 @@ Ext.define('MsTraining.view.users.UserGrid', {
     },
     bbar: {
         xtype: 'pagingtoolbar',
-        displayInfo: true
+        displayInfo: true,
+        // pageSize: 10
+       
     },
     scrollable:true,
-    height: 800
+    height: 600,
+ 
 })

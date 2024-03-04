@@ -9,7 +9,7 @@ Ext.define("MsTraining.model.Comment", {
 
     proxy: {
         type: 'rest',
-        url: 'https://jsonplaceholder.typicode.com/comments',
+        url: 'http://localhost:3000/comments',
         reader: {
             type: 'json'
         }
@@ -31,7 +31,7 @@ Ext.define("MsTraining.model.Comment", {
         console.log('Post: ' + post.get('title'));
            post.comments(function(comments) {   
                   comments.each(function(comment) {           
-                           console.log(comment.get('name'));           
+                        //    console.log(comment.get('name'));           
                                   });  }); }
                                 
                                 });

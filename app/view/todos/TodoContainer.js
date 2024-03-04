@@ -6,7 +6,7 @@ Ext.define('MsTraining.view.todos.TodoContainer', {
         type: 'todos'
     },
 
-    title: 'Todos',
+    // title: 'Todos',
     // width: 680,
     height: 600,
     layout: {

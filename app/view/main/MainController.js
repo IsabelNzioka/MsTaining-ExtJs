@@ -15,5 +15,7 @@ Ext.define('MsTraining.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
-    }
+    },
+
+    
 });

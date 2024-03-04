@@ -4,7 +4,7 @@ Ext.define('MsTraining.view.todos.TodoGrid', {
     store: {
         type: 'todos'
     },
-    
+
     title: 'Todos',
     // width: 680,
     height: 600,
@@ -13,7 +13,7 @@ Ext.define('MsTraining.view.todos.TodoGrid', {
         align: 'stretch'
     },
     columns: [
-        {dataIndex: 'id', text: 'ID' },
+        {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 2 },
         {dataIndex: 'userId', text: 'User Id' },
         {dataIndex: 'completed', text: 'Completed' },

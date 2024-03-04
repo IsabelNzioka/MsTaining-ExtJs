@@ -3,7 +3,16 @@ Ext.define("MsTraining.model.Todo", {
     extend: 'Ext.data.Model',
     idProperty: 'id',
     fields: [
-        'id','userId', 'title', 'completed'
+        '_id', 'userId', 'title', 'completed', {
+            name: 'user',
+            reference: {
+                type: 'User',
+                inverse: {
+                    // role: 'todos',
+                    autoLoad: false
+                }
+            }
+        }
     ],
 
     proxy: {
