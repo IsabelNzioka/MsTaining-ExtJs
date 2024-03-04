@@ -1,7 +1,7 @@
 Ext.define("MsTraining.model.Todo", {
 
     extend: 'Ext.data.Model',
-    idProperty: 'id',
+    idProperty: '_id',
     fields: [
         '_id', 'userId', 'title', 'completed', {
             name: 'user',
@@ -17,9 +17,11 @@ Ext.define("MsTraining.model.Todo", {
 
     proxy: {
         type: 'rest',
-        url: 'https://jsonplaceholder.typicode.com/todos',
+        url: 'http://localhost:3000/todos',
         reader: {
             type: 'json',
+            rootProperty: 'rows',
+            countProperty: 'totalCount'
         }
     }
     

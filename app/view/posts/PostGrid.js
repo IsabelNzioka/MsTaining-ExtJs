@@ -13,7 +13,7 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         }
     }],
     columns: [
-        {dataIndex: 'id', text: 'ID' },
+        {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 1},
        
         {dataIndex: 'body', text: 'BODY', flex: 2 , sortable: false},
@@ -29,6 +29,6 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable:true,
-    height: 800
+    height: 600
 })
 

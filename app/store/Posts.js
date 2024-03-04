@@ -7,6 +7,7 @@ Ext.define("MsTraining.store.Posts",
     model:'MsTraining.model.Post',
     requires: ['MsTraining.model.Post'],
     autoLoad: true,
+    pageSize: 25,
     sorters: ['id', 'title'],
     // filters: {
     //    property: 'userId',

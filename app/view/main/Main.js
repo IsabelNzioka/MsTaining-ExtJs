@@ -119,13 +119,13 @@ Ext.define('MsTraining.view.main.Main', {
         }
        ]
     },
-    
+    // <i class="fa-solid fa-cart-shopping"></i>
     {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        title: 'Checkout',
+        iconCls: 'fa-solid fa-cart-plus',
+        items: [{
+           xtype: 'checkoutform'
+        }]
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',

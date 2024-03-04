@@ -1,14 +1,14 @@
 Ext.define("MsTraining.model.Album", {
 
     extend: 'Ext.data.Model',
-    idProperty: 'id',
+    idProperty: '_id',
     fields: [
-        'id','userId', 'title'
+        '_id','userId', 'title'
     ],
 
     proxy: {
         type: 'rest',
-        url: 'https://jsonplaceholder.typicode.com/albums',
+        url: 'http://localhost:3000/albums',
         reader: {
             type: 'json',
         }

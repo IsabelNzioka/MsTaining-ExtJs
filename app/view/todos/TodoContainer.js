@@ -24,7 +24,7 @@ Ext.define('MsTraining.view.todos.TodoContainer', {
         flex: 1,
 
         columns: [
-        {dataIndex: 'id', text: 'ID' },
+        {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 2 },
         {dataIndex: 'userId', text: 'User Id' },
         {dataIndex: 'completed', text: 'Completed' },
@@ -37,7 +37,7 @@ Ext.define('MsTraining.view.todos.TodoContainer', {
         flex: 1,
 
         columns: [
-        {dataIndex: 'id', text: 'ID' },
+        {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 2 },
         {dataIndex: 'userId', text: 'User Id' },
         // {dataIndex: 'completed', text: 'Completed' },
