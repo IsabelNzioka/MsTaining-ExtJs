@@ -25,7 +25,7 @@ Ext.define("MsTraining.model.User", {
         reader: {
             type: 'json',
             rootProperty: 'rows',
-            countProperty: 'totalCount'
+            totalProperty: 'totalCount'
         }
     }
 

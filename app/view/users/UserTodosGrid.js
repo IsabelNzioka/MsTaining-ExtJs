@@ -1,6 +1,6 @@
 Ext.define('MsTraining.view.users.UserTodosGrid', {
     extend: 'Ext.panel.Panel',
-    xtype: 'usergrid',
+    xtype: 'usertodosgrid',
     referenceHolder: true,
     layout: {
         type: 'hbox',
@@ -8,7 +8,7 @@ Ext.define('MsTraining.view.users.UserTodosGrid', {
     },
 
     viewModel: 'userviewmodel',
-    controller: 'userviewcontroller',
+    controller: 'usertodoviewcontroller',
 
     items: [{
         title: 'Users',
@@ -38,7 +38,11 @@ Ext.define('MsTraining.view.users.UserTodosGrid', {
             listeners: {
                 select: 'onUserSelectionChange'
               }
-        }
+        },
+        bbar: {
+            xtype: 'pagingtoolbar',
+            displayInfo: true
+        },
        
 
     },
@@ -54,6 +58,10 @@ Ext.define('MsTraining.view.users.UserTodosGrid', {
             { dataIndex: 'userId', text: 'User Id' },
             { dataIndex: 'completed', text: 'Completed' },
         ],
+        bbar: {
+            xtype: 'pagingtoolbar',
+            displayInfo: true
+        },
 
     },
     ],

@@ -6,7 +6,7 @@ Ext.define("MsTraining.store.Posts",
     alias: 'store.posts',
     model:'MsTraining.model.Post',
     requires: ['MsTraining.model.Post'],
-    autoLoad: true,
+    // autoLoad: true,
     pageSize: 25,
     sorters: ['id', 'title'],
     // filters: {

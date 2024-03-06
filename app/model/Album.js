@@ -11,6 +11,8 @@ Ext.define("MsTraining.model.Album", {
         url: 'http://localhost:3000/albums',
         reader: {
             type: 'json',
+            rootProperty: 'rows',
+            totalProperty: 'totalCount'
         }
     }
     

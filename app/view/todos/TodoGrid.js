@@ -1,13 +1,13 @@
 Ext.define('MsTraining.view.todos.TodoGrid', {
     extend: 'Ext.grid.Panel',
-    xtype: 'todogrid1',
+    xtype: 'todosgrid',
     store: {
         type: 'todos'
     },
 
-    title: 'Todos',
+    // title: 'Todos',
     // width: 680,
-    height: 600,
+    // height: 600,
     layout: {
         type: 'vbox',
         align: 'stretch'

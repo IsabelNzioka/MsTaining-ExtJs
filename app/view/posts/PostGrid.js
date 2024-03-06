@@ -1,6 +1,8 @@
 Ext.define('MsTraining.view.posts.PostGrid', {
     extend: 'Ext.grid.Panel',
     xtype: 'postgrid',
+    reference: 'postgrid',
+
     controller: "postgridviewcontroller",
     
     store: {
@@ -29,6 +31,6 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable:true,
-    height: 600
+    // height: 600
 })
 

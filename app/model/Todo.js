@@ -21,7 +21,7 @@ Ext.define("MsTraining.model.Todo", {
         reader: {
             type: 'json',
             rootProperty: 'rows',
-            countProperty: 'totalCount'
+            totalProperty: 'totalCount'
         }
     }
     

@@ -5,7 +5,7 @@ Ext.define('MsTraining.view.albums.AlbumGrid', {
         type: 'albums'
     },
     columns: [
-        {dataIndex: 'id', text: 'ID' },
+        {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 2 },
         {dataIndex: 'userId', text: 'User Id' },
     ],
@@ -18,5 +18,5 @@ Ext.define('MsTraining.view.albums.AlbumGrid', {
         displayInfo: true
     },
     scrollable:true,
-    height: 800
+    height: 600
 })

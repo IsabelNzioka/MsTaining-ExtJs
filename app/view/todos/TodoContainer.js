@@ -40,7 +40,7 @@ Ext.define('MsTraining.view.todos.TodoContainer', {
         {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 2 },
         {dataIndex: 'userId', text: 'User Id' },
-        // {dataIndex: 'completed', text: 'Completed' },
+        {dataIndex: 'completed', text: 'Completed' },
     ]
     }
 ]

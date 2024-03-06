@@ -7,6 +7,7 @@ Ext.define("MsTraining.store.Todos",
     model:'MsTraining.model.Todo',
     requires: ['MsTraining.model.Todo'],
     autoLoad: true,
+    pageSize: 25,
    
     
        

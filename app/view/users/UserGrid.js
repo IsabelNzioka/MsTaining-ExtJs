@@ -1,15 +1,18 @@
 Ext.define('MsTraining.view.users.UserGrid', {
     extend: 'Ext.grid.Panel',
-    xtype: 'usergrid1',
+    xtype: 'usergrid',
+    controller: 'userviewcontroller',
     store: {
         type: 'users'
     },
 
+    height: 900,
     title: 'Users',
+
     columns: [
         {dataIndex: '_id', text: 'ID' },
-        {dataIndex: 'name', text: 'Name' , flex: 1 },
-        {dataIndex: 'email', text: 'Email' , flex: 1},
+        {dataIndex: 'name', text: 'Name' , flex: 2 },
+        {dataIndex: 'email', text: 'Email' , flex: 2},
         {dataIndex: 'street', text: 'Street', flex: 1 },
         {dataIndex: 'suite', text: 'Suite' },
         {dataIndex: 'city', text: 'City' },
@@ -24,15 +27,25 @@ Ext.define('MsTraining.view.users.UserGrid', {
     ],
 
     selModel: {
+        selType: 'checkboxmodel',
         mode: 'SINGLE'
     },
+    tbar: [
+        {
+            text: 'Add User'
+        },'->', {
+          text: 'Show Details',
+          handler: 'onShowDetails'  
+        }
+    ],
     bbar: {
         xtype: 'pagingtoolbar',
-        displayInfo: true,
-        // pageSize: 10
-       
+        displayInfo: true
+    },
+    listeners: {
+        cellclick: 'onUserGridCellClick'
     },
     scrollable:true,
-    height: 600,
+    // height: 600,
  
 })

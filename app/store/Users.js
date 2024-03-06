@@ -6,5 +6,6 @@ Ext.define("MsTraining.store.Users", {
     model:'MsTraining.model.User',
     requires: ['MsTraining.model.User'],
     autoLoad: true,
+    pageSize: 25,
 
 })
