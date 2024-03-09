@@ -1,13 +1,16 @@
 Ext.define('MsTraining.view.todos.TodoGrid', {
     extend: 'Ext.grid.Panel',
     xtype: 'todosgrid',
+    reference: 'todosgrid',
     store: {
         type: 'todos'
     },
 
+    controller: 'todogridcontroller',
+
     // title: 'Todos',
     // width: 680,
-    // height: 600,
+    height: 600,
     layout: {
         type: 'vbox',
         align: 'stretch'
@@ -20,12 +23,27 @@ Ext.define('MsTraining.view.todos.TodoGrid', {
     ],
 
     selModel: {
+        selType:'checkboxmodel',
         mode: 'SINGLE'
     },
     bbar: {
         xtype: 'pagingtoolbar',
         displayInfo: true
     },
+
+    tbar: [
+        {
+            text: 'Add Todo',
+            handler: 'onAddTodo'
+
+        },{
+            text: 'Add View',
+            handler: 'onViewTodo' ,
+            bind: {
+                disabled: '{!todosgrid.selection}'
+            }
+        }
+    ],
     scrollable:true,
    
 })

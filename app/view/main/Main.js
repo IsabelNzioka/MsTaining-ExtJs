@@ -74,7 +74,15 @@ Ext.define('MsTraining.view.main.Main', {
         }
     },
 
-    items: [{
+    items: [
+        {
+            title: 'Static Data Management',
+            iconCls: 'fa-solid fa-table',
+            items: [{
+                xtype: 'parentpanel'
+            }]
+        },
+        {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
@@ -96,7 +104,8 @@ Ext.define('MsTraining.view.main.Main', {
         iconCls: 'fa-solid fa-list',
         items: [
             {
-                xtype: 'todogrid'
+                // xtype: 'todogrid'
+                xtype: 'todosgrid'
             }
         ]
     }, 
@@ -119,13 +128,7 @@ Ext.define('MsTraining.view.main.Main', {
         }
        ]
     },
-    {
-        title: 'Static Data Management',
-        iconCls: 'fa-solid fa-table',
-        items: [{
-            xtype: 'parentpanel'
-        }]
-    },
+   
     
     // <i class="fa-solid fa-cart-shopping"></i>
     {
