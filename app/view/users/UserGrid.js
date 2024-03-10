@@ -12,9 +12,20 @@ Ext.define('MsTraining.view.users.UserGrid', {
 
     columns: [
         {dataIndex: '_id', text: 'ID' },
-        {dataIndex: 'name', text: 'Name' , flex: 2 },
-        {dataIndex: 'email', text: 'Email' , flex: 2},
-        {dataIndex: 'street', text: 'Street', flex: 1 },
+        {dataIndex: 'name', text: 'Name' , flex: 2, editor: 'textfield' },
+        {
+            dataIndex: 'email', 
+            text: 'Email' ,
+            flex: 2,
+            renderer: function(value) {
+                return Ext.String.format('<a href="mailto:{0}">{1}</a>', value, value);
+            },
+            editor: {
+                xtype: 'textfield',
+                allowBlank: false
+            }
+            },
+        {dataIndex: 'street', text: 'Street', flex: 1 ,  editor: 'textfield'},
         {dataIndex: 'suite', text: 'Suite' },
         {dataIndex: 'city', text: 'City' },
         {dataIndex: 'zipcode', text: 'ZipCode', flex: 2 },
@@ -27,9 +38,15 @@ Ext.define('MsTraining.view.users.UserGrid', {
         {dataIndex: 'bs', text: 'Bs', flex: 1  },
     ],
 
-    selModel: {
-        selType: 'checkboxmodel',
-        mode: 'SINGLE'
+    selModel: 'rowmodel',
+    // selModel: {
+    //     selType: 'checkboxmodel',
+    //     mode: 'SINGLE'
+    // },
+    plugins: {
+        rowediting: {
+            clicksToEdit: 1
+        }
     },
     tbar: [
         {
@@ -52,7 +69,9 @@ Ext.define('MsTraining.view.users.UserGrid', {
         displayInfo: true
     },
     listeners: {
-        cellclick: 'onUserGridCellClick'
+        cellclick: 'onUserGridCellClick',
+        celldblclick: 'onUserGridCellDblClick',
+        cellcontextmenu: 'onUserGridCellContextMenu'
     },
     scrollable:true,
     // height: 600,

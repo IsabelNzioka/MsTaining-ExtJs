@@ -66,10 +66,10 @@ Ext.define('MsTraining.view.modelbinding.ModelBindingForm', {
                 typeAhead: true,
                 valueField:'abbr',
                 
-                // listeners:{
-                //     select:'onStateSelected',
-                //     change:'onStateSelectionChange'
-                // }
+                listeners:{
+                    select:'onStateSelected',
+                    change:'onStateSelectionChange'
+                }
             },
 
         ]
