@@ -111,11 +111,11 @@ Ext.define('MsTraining.view.main.Main', {
     }, 
     
     {
-        title: 'Posts',
+        title: 'Employees',
         iconCls: 'fa-user',
        items: [
         {
-            // xtype: 'postgrid'
+            xtype: 'employeegrid'
         }
        ]
     },
@@ -130,7 +130,7 @@ Ext.define('MsTraining.view.main.Main', {
     },
    
     
-    // <i class="fa-solid fa-cart-shopping"></i>
+    // <i class="fa-solid fa-clipboard-list"></i>
     {
         title: 'Checkout',
         iconCls: 'fa-solid fa-cart-plus',
@@ -138,10 +138,10 @@ Ext.define('MsTraining.view.main.Main', {
            xtype: 'checkoutform'
         }]
     }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        title: 'Summary',
+        iconCls: 'fa-solid fa-clipboard-list',
+        items: [{
+            xtype: 'summarygrid'
+         }]
     }]
 });
