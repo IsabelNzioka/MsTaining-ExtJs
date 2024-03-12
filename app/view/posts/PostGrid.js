@@ -13,7 +13,21 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         listeners: {
             click: 'onAddPostClicked'
         }
-    }],
+    },
+    {
+        text: 'Edit/View Post',
+        iconCls: 'fas fa-pencil-alt',
+        listeners: {
+            click: 'onEditClicked'
+        }
+    },
+    {
+        text: 'Delete Post',
+        iconCls: 'far fa-trash-alt',
+        listeners: {
+            click: 'onDeleteClicked'
+        }
+    },],
     columns: [
         {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 1},

@@ -29,9 +29,9 @@ Ext.define('MsTraining.store.Menu',{
                 iconCls:'fa fa-database fa-lg',
                 children: [
                     {
-                        text: 'UsersTodos',
+                        text: 'Posts',
                         iconCls: 'fa fa-users',
-                        className:'usertodosgrid',
+                        className:'postgrid',
                         leaf: true
                     },
                     {

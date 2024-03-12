@@ -2,6 +2,8 @@ Ext.define('MsTraining.view.todos.TodoGridController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.todogridcontroller',
 
+    mixins: ['MsTraining.mixin.GridMixin'],
+
 
     onAddTodo: function(btn, e, eOpts) {
 
@@ -20,6 +22,7 @@ Ext.define('MsTraining.view.todos.TodoGridController', {
 
         let grid = this.getView();
         record = grid.getSelectionModel().getSelection()[0];
+        // TODO - let record = this.getSelectedRecordByXType('todogrid');
 
         Ext.create({
             xtype: 'todoform',
