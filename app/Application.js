@@ -23,7 +23,17 @@ Ext.define('MsTraining.Application', { //class name then class c
                 }
             }
         );
-    }
+    },
+
+    launch:function(profile){
+        var loggedIn;
+        loggedIn = localStorage.getItem("MsAppLoggedIn");
+        console.log('Logged IN', loggedIn);
+        // Ext.widget(loggedIn ? 'app-main' : 'login');
+        Ext.create({
+          xtype: loggedIn ? 'app-main' : 'login'
+        })
+      }
 },
 function() {console.log("callback function of the OBject abv")}
 

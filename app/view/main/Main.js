@@ -10,138 +10,40 @@ Ext.define('MsTraining.view.main.Main', {
     xtype: 'app-main',
 
     requires: [
-        'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
-
         'MsTraining.view.main.MainController',
-        'MsTraining.view.main.MainModel',
-        'MsTraining.view.main.List'
+        'MsTraining.view.main.MainModel'
     ],
 
     controller: 'main',
+    plugins: 'viewport',
     viewModel: 'main',
 
-    ui: 'navigation',
-
-    tabBarHeaderPosition: 1,
-    titleRotation: 0,
-    tabRotation: 0,
-
-    header: {
-        layout: {
-            align: 'stretchmax'
-        },
-        title: {
-            bind: {
-                text: '{name}'
-            },
-            flex: 0
-        },
-        iconCls: 'fa-th-list'
+    layout: {
+        type: 'border'
     },
 
-    tabBar: {
-        flex: 1,
-        layout: {
-            align: 'stretch',
-            overflowHandler: 'none'
-        }
-    },
-
-    responsiveConfig: {
-        tall: {
-            headerPosition: 'top'
+    items: [{
+        xtype: 'panel',
+        bind: {
+            title: '{name}'
         },
-        wide: {
-            headerPosition: 'left'
-        }
-    },
-
-    defaults: {
-        bodyPadding: 20,
-        tabConfig: {
-            responsiveConfig: {
-                wide: {
-                    iconAlign: 'left',
-                    textAlign: 'left'
-                },
-                tall: {
-                    iconAlign: 'top',
-                    textAlign: 'center',
-                    width: 120
-                }
-            }
-        }
-    },
-
-    items: [
-        {
-            title: 'Static Data Management',
-            iconCls: 'fa-solid fa-table',
-            items: [{
-                xtype: 'parentpanel'
-            }]
-        },
-        {
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
+        region: 'west',
+        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
+        width: 250,
+        split: true,
+        tbar: [{
+            text: 'Logout',
+            handler: 'onLogout'
         }]
-    }, 
-    {
-        title: 'Users',
-        iconCls: 'fa-user',
-        items: [
-            {
-                xtype: 'usertodosgrid'
-            }
-        ]
-    }, 
-    {
-        title: 'Todos',
-        iconCls: 'fa-solid fa-list',
-        items: [
-            {
-                // xtype: 'todogrid'
-                xtype: 'todosgrid'
-            }
-        ]
-    }, 
-    
-    {
-        title: 'Employees',
-        iconCls: 'fa-user',
-       items: [
-        {
-            xtype: 'employeegrid'
-        }
-       ]
-    },
-    {
-        title: 'Albums',
-        iconCls: 'fa-light fa-images',
-       items: [
-        {
-            xtype: 'albumgrid'
-        }
-       ]
-    },
-   
-    
-    // <i class="fa-solid fa-clipboard-list"></i>
-    {
-        title: 'Checkout',
-        iconCls: 'fa-solid fa-cart-plus',
-        items: [{
-           xtype: 'checkoutform'
+    },{
+        region: 'center',
+        xtype: 'tabpanel',
+        items:[{
+            title: 'Tab 1',
+            html: '<h2>Content appropriate for the current navigation.</h2>'
         }]
-    }, {
-        title: 'Summary',
-        iconCls: 'fa-solid fa-clipboard-list',
-        items: [{
-            xtype: 'summarygrid'
-         }]
     }]
+
+    
 });
