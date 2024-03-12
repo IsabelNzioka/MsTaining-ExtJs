@@ -4,3 +4,14 @@
  */
 $enable-font-awesome: dynamic(true);
 $base-color: #2D4356;
+
+$mstraining-button-icon-color: #fff;
+$mstraining-tab-icon-color: rgb(11, 103, 196);
+
+.tabIcon {
+    color: $mstraining-tab-icon-color;
+}
+
+.buttonIcon {
+    color: $mstraining-button-icon-color;
+}
