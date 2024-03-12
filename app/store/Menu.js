@@ -12,11 +12,13 @@ Ext.define('MsTraining.store.Menu',{
                     {
                         text:'Users',
                         iconCls:'fa fa-users',
+                        className:'parentpanel',
                         leaf:true
                     },
                     {
-                        text: 'Permission',
+                        text: 'Todos',
                         iconCls: 'fas fa-user-secret',
+                        className: 'todogrid',
                         leaf: true
                     }
                 ]
@@ -27,13 +29,15 @@ Ext.define('MsTraining.store.Menu',{
                 iconCls:'fa fa-database fa-lg',
                 children: [
                     {
-                        text: 'Users',
+                        text: 'UsersTodos',
                         iconCls: 'fa fa-users',
+                        className:'usertodosgrid',
                         leaf: true
                     },
                     {
                         text: 'Permission',
                         iconCls: 'fa fa-users',
+                        className: 'todogrid',
                         leaf: true
                     }
                 ]

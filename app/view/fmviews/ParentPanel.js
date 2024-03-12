@@ -10,6 +10,7 @@ Ext.define('MsTraining.view.fmviews.ParentPanel', {
         },
         {
             xtype: 'staticdatamanagementtabpanel',
+            scrollable: true
             // height: 400
         }
     ]

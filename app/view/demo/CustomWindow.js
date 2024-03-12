@@ -6,7 +6,7 @@ Ext.define("MsTraining.view.demo.CustomWindow", {
     title: "My Custom Title",
     height: 200,
     width: 220,
-    autoShow: true,
+    autoShow: false,
     closable: true,
     maximizable: true,
     // draggable: true,
@@ -23,12 +23,12 @@ Ext.define("MsTraining.view.demo.CustomWindow", {
 //     wd.show();
 // }
 )
-Ext.onReady(
-    function() {
-        var wd = Ext.create({
-        xtype: "customwindow",
-    });
-    wd.show();
+// Ext.onReady(
+//     function() {
+//         var wd = Ext.create({
+//         xtype: "customwindow",
+//     });
+//     wd.show();
 
-    }
-)
+//     }
+// )

@@ -7,8 +7,9 @@ Ext.define('MsTraining.view.users.UserGrid', {
         type: 'users'
     },
 
-    height: 900,
+    height: 600,
     title: 'Users',
+  
 
     columns: [
         {dataIndex: '_id', text: 'ID' },
