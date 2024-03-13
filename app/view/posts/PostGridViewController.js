@@ -45,8 +45,13 @@ Ext.define("MsTraining.view.posts.PostGridViewController", {
             });
             
         }
-    }
+    },
 
+    onVTypesClicked: function (btn, e, eOpts) {
+        Ext.create({
+            xtype: "formfieldvtypevalidation",
+        });
+    },
     // onPostSave: function() {
     //     var form = this.getView().down("form").getForm();
     //     console.log("Saving data to: https://jsonplaceholder.typicode.com/posts");

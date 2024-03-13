@@ -20,9 +20,10 @@ Ext.define('MsTraining.view.todos.TodoGridController', {
     },
     onViewTodo: function(btn, e, eOpts) {
 
-        let grid = this.getView();
-        record = grid.getSelectionModel().getSelection()[0];
-        // TODO - let record = this.getSelectedRecordByXType('todogrid');
+        // let grid = this.getView();
+        // record = grid.getSelectionModel().getSelection()[0];
+        // TODO - 
+        let record = this.getSelectedRecordByXType('todosgrid');
 
         Ext.create({
             xtype: 'todoform',

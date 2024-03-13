@@ -27,7 +27,20 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         listeners: {
             click: 'onDeleteClicked'
         }
-    },],
+    },
+    // {
+    //     text: 'Form fields',
+    //     listeners: {
+    //         click: 'onFormFieldsClicked'
+    //     }
+    // },
+     {
+        text: 'VTypes',
+        listeners: {
+            click: 'onVTypesClicked'
+        }
+    },
+],
     columns: [
         {dataIndex: '_id', text: 'ID' },
         {dataIndex: 'title', text: 'TITLE' , flex: 1},
