@@ -4,6 +4,16 @@ Ext.define('MsTraining.view.albums.AlbumGrid', {
     store: {
         type: 'albums'
     },
+    tbar:[
+    {
+        text: 'Delete Album',
+        iconCls: 'far fa-trash-alt',
+        listeners: {
+            click: 'onDelete'
+        }
+    },
+   
+],
     columns: [
         {xtype: 'rownumberer'},
         {dataIndex: '_id', text: 'ID' },

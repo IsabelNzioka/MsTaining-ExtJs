@@ -16,6 +16,12 @@ Ext.define('MsTraining.store.Menu',{
                         leaf:true
                     },
                     {
+                        text:'UsersDetails',
+                        iconCls:'fa fa-users',
+                        className:'users',
+                        leaf:true
+                    },
+                    {
                         text: 'Todos',
                         iconCls: 'fas fa-user-secret',
                         className: 'todogrid',
@@ -34,12 +40,32 @@ Ext.define('MsTraining.store.Menu',{
                         className:'postgrid',
                         leaf: true
                     },
+                    
+                    {
+                        text: 'Albums',
+                        iconCls: 'fa fa-users',
+                        className: 'albumgrid', //albumgrid
+                        leaf: true
+                    },
+                    {
+                        text: 'Posts',
+                        iconCls: 'fa fa-users',
+                        className:'postgrid',
+                        leaf: true
+                    },
+                    {
+                        text: 'UserTodos',
+                        iconCls: 'fa fa-users',
+                        className: 'usertodosgrid', //albumgrid, checkoutform
+                        leaf: true
+                    },
                     {
                         text: 'Permission',
                         iconCls: 'fa fa-users',
-                        className: 'todogrid',
+                        className: 'todogrid', //albumgrid, checkoutform
                         leaf: true
-                    }
+                    },
+
                 ]
 
             },

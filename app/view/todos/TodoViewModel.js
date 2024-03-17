@@ -5,6 +5,7 @@ Ext.define('MsTraining.view.todos.TodoViewModel', {
     data: {
         isCompleted: true
     },
+    // defining the store within  the viewmodel - storeless grids
     stores: {
         alltodos: {
             model: 'MsTraining.model.Todo',
@@ -20,6 +21,11 @@ Ext.define('MsTraining.view.todos.TodoViewModel', {
             sorters: [{
                 property: 'completed',
             }]
+        }, 
+        users: {
+                model: 'MsTraining.model.User',
+                autoLoad: true,
+        
         }
     }
 

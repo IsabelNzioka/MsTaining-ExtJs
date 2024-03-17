@@ -5,6 +5,7 @@ Ext.define('MsTraining.view.todos.TodoContainer', {
     store: {
         type: 'todos'
     },
+    viewModel: 'todoviewmodel',
 
     // title: 'Todos',
     // width: 680,
@@ -14,7 +15,7 @@ Ext.define('MsTraining.view.todos.TodoContainer', {
         align: 'stretch'
     },
 
-    viewModel: 'todoviewmodel',
+   
 
 
     items: [{

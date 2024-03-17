@@ -2,6 +2,7 @@ Ext.define('MsTraining.view.layouts.CheckoutForm', {
     extend: 'Ext.form.Panel',
     xtype: 'checkoutform',
     title: 'Checkout Form',
+    reference: 'checkoutform',
 
     bodyPadding: 10,
     frame: true,

@@ -7,6 +7,7 @@ Ext.define('MsTraining.view.todos.TodoGrid', {
     },
 
     controller: 'todogridcontroller',
+    style: 'margin-top: 5px;',
 
     // title: 'Todos',
     // width: 680,

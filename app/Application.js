@@ -33,8 +33,24 @@ Ext.define('MsTraining.Application', { //class name then class c
         Ext.create({
           xtype: loggedIn ? 'app-main' : 'login'
         })
-      }
-},
-function() {console.log("callback function of the OBject abv")}
+      },
+    
+  defaultToken: 'home',
+  listen: {
+    global: {
+      unmatchedroute: 'onUnmatchedRoute'
+    }
+  },
 
-);
+  onUnmatchedRoute: function (token) {
+    Ext.Msg.show({
+      title: 'Failure',
+      msg: 'Unknown path: /' + token,
+      buttons: Ext.Msg.OK,
+      icon: Ext.Msg.ERROR
+    });
+  }
+
+
+
+});
