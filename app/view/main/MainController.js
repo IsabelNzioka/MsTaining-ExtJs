@@ -35,6 +35,9 @@ Ext.define('MsTraining.view.main.MainController', {
     getMainMenu: function () {
         return Ext.ComponentQuery.query('mainmenu')[0];
     },
+    getUserGrid: function () {
+        return Ext.ComponentQuery.query('userdetailsgrid')[0];
+    },
 
     onMainMenuItemClick: function(view, record, item, index, e, eOpts) {
         this.redirectTo(record.get('className'))
@@ -44,6 +47,7 @@ Ext.define('MsTraining.view.main.MainController', {
         if (record) {
             let mainPanel = this.getMainPanel();
             let activeTab = mainPanel.items.findBy((tabItem) => tabItem.title === record.get('text'));
+            console.log(activeTab + " record" + record);
             if (!activeTab && record.get('leaf')) {
                 //create new tab using details from the record
                 activeTab = mainPanel.add({
@@ -65,7 +69,48 @@ Ext.define('MsTraining.view.main.MainController', {
             action: 'onRoute',
             before: 'onBeforeRoute'
         },
+        'users/:id': {
+            action: 'onUserSelect',
+            before: 'onBeforeUserSelect',
+            conditions: {
+                ':id': '([0-9]+)'
+            }
+        }
     },
+
+    onUserSelect:function(id){
+        this.getUserGrid().fireEvent('selectuser',id)
+    },
+
+    onBeforeUserSelect: function (id, action){
+        var me = this,
+            hash = 'users',
+            mainMenu = me.getMainMenu();
+        me.locateMenuItem(mainMenu, hash);
+
+        console.log("record>>>>>>>>>>>>>>>>>>>" + id)
+
+        //get reference to grid
+        console.log("record>>>>>>>>>>>>>>>>>>>" + this)
+        let grid = this.getUserGrid();
+        let store = grid.getStore()
+
+        //find record with the id
+        let record = store.findRecord('_id', id);
+        console.log("record>>>>>>>>>>>>>>>>>>>" + record)
+        // grid.getSelectionModel().select(record)
+
+        if(record){
+            action.resume()
+
+        }else{
+            action.stop()
+        }
+
+
+    }
+,
+
 
     onHomeRoute:function(){
         let mainPanel = this.getMainPanel();

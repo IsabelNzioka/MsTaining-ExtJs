@@ -11,29 +11,44 @@ Ext.define("MsTraining.view.users.UserViewController", {
 
 
     onUserGridCellClick: function(grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+
+        // let userdetailsgrid = Ext.ComponentQuery.query('userdetailsgrid')[0];
+        let userGrid = this.getView();
         console.log(record.get('_id'));
 
-        let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
-        let todosStore = Ext.ComponentQuery.query('todosgrid')[0].getStore();
+            let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
+            let todosStore = Ext.ComponentQuery.query('todosgrid')[0].getStore();
+            
+    
+            postsStore.reload({
+                params:{
+                    userId: record.get('_id')
+                }
+            });
+            todosStore.reload({
+                params:{
+                    userId: record.get('_id')
+                }
+            });
         
 
-        postsStore.reload({
-            params:{
-                userId: record.get('_id')
-            }
-        })
-        todosStore.reload({
-            params:{
-                userId: record.get('_id')
-            }
-        })
+       
+
+
+        let me = this,
+            view = me.getView(), 
+            vm = me.getViewModel(), 
+            refs=me.getReferences();
+        console.log('getView ---Meeeeeeeeeeeeee' + view);
+        vm.set("record", record)
+
 
     },
 
     onShowDetails: function(btn, state) {
         let userGrid = this.getView();
-        console.log("Clicked>>>>>>>>>>>>>>>>>>>");
-        let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
+
+     let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
         if(userGrid.getHeight() === 600){
             userGrid.setHeight(300)
             lowerPanel.setHeight(400)

@@ -2,10 +2,12 @@ Ext.define('MsTraining.view.users.UserGrid', {
     extend: 'Ext.grid.Panel',
     xtype: 'usergrid',
     reference: 'usergrid',
+
     controller: 'userviewcontroller',
     store: {
         type: 'users'
     },
+ 
 
     height: 600,
     title: 'Users',

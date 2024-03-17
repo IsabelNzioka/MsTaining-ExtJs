@@ -3,10 +3,10 @@ Ext.define('MsTraining.view.users.Users',{
     xtype:'users',
     items:[
         {
-            xtype:'usergrid'
+            xtype:'userdetailsgrid'
         },
         {
-            xtype:'tabpanel'
+            xtype:'userdetailstab'
         }
     ]
 })
