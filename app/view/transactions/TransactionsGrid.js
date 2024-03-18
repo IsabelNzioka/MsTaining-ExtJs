@@ -23,28 +23,28 @@ Ext.define('MsTraining.view.transactions.TransactionsGrid', {
                 metaData.style = 'color: blue;'; 
             }
             return value;
-        }  },
+        } ,
+        summaryRenderer: function(value, summaryData, dataIndex) {
+            return Ext.String.format( value,);
+        }
+     },
         { text: 'Cr', dataIndex: 'credit',summaryType: 'sum', flex: 1,
         renderer: function(value, metaData) {
             if (value >= 40000000) {
                 metaData.style = 'color: blue;'; 
             }
             return value;
-        } 
+        } ,
+        summaryRenderer: function(value, summaryData, dataIndex) {
+            return Ext.String.format( value,);
+        }
      }
     ],
 
-    listeners: {
-        viewready: function(grid) {
-            var store = grid.getStore();
-            store.on('load', function() {
-                var totalDebit = store.sum('debit');
-                var totalCredit = store.sum('credit');
-
-                store.add({ account: 'Total', debit: totalDebit, credit: totalCredit });
-                grid.down('gridsummary').showSummaryRow = true;
-            });
-        }
-    }
+    // listeners: {
+    //     viewready: function(grid) {
+          
+    //     }
+    // }
 
 })
