@@ -65,7 +65,7 @@ Ext.define('MsTraining.view.main.MainController', {
 
     routes: {
         'home': 'onHomeRoute',
-        'users|reviewpanel|mainlist|postgrid|todogrid|parentpanel': {
+        'users|reviewpanel|mainlist|postgrid|todogrid|parentpanel|transactionsgrid': {
             action: 'onRoute',
             before: 'onBeforeRoute'
         },

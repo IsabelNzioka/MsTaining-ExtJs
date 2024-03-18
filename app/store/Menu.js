@@ -62,14 +62,27 @@ Ext.define('MsTraining.store.Menu',{
                     {
                         text: 'Permission',
                         iconCls: 'fa fa-users',
-                        className: 'todogrid', //albumgrid, checkoutform
+                        className: 'todogrid', //albumgrid,transactionsgrid  checkoutform
                         leaf: true
                     },
 
                 ]
 
             },
-            
+            {
+                text: 'Accounting',
+                iconCls:'fas fa-users-cog',
+                children:[
+                    {
+                        text:'Trial Balance',
+                        iconCls:'fa fa-users',
+                        className:'transactionsgrid',
+                        leaf:true
+                    },
+                    
+                ]
+              
+            },
         ]
     }
 })
